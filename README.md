@@ -35,5 +35,5 @@ npm run start
 ## Build electron app
 
 ```bash
-npm make start
+npm run make
 ```
