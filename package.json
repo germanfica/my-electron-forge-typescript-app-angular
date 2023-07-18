@@ -1,0 +1,62 @@
+{
+  "name": "my-electron-app",
+  "productName": "my-app",
+  "version": "1.0.0",
+  "description": "My Electron application description",
+  "main": "dist/my-electron-app/main.js",
+  "scripts": {
+    "ng": "ng",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "start:angular": "ng build --base-href",
+    "start:electron": "tsc -p tsconfig.electron.json",
+    "start": "npm run start:angular && npm run start:electron && electron-forge start",
+    "package": "electron-forge package",
+    "make:angular": "ng build --base-href",
+    "make:electron": "tsc -p tsconfig.electron.json",
+    "make": "npm run make:angular && npm run make:electron && electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "eslint -c .eslintrc --ext .ts ./src"
+  },
+  "keywords": [],
+  "author": {
+    "name": "German Fica"
+  },
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^14.2.0",
+    "@angular/common": "^14.2.0",
+    "@angular/compiler": "^14.2.0",
+    "@angular/core": "^14.2.0",
+    "@angular/forms": "^14.2.0",
+    "@angular/platform-browser": "^14.2.0",
+    "@angular/platform-browser-dynamic": "^14.2.0",
+    "@angular/router": "^14.2.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "rxjs": "~7.5.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^14.2.11",
+    "@angular/cli": "~14.2.11",
+    "@angular/compiler-cli": "^14.2.0",
+    "@electron-forge/cli": "^6.2.1",
+    "@electron-forge/maker-deb": "^6.2.1",
+    "@electron-forge/maker-rpm": "^6.2.1",
+    "@electron-forge/maker-squirrel": "^6.2.1",
+    "@electron-forge/maker-zip": "^6.2.1",
+    "@electron-forge/plugin-auto-unpack-natives": "^6.2.1",
+    "@types/jasmine": "~4.0.0",
+    "electron": "25.3.0",
+    "jasmine-core": "~4.3.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.0.0",
+    "typescript": "~4.7.2"
+  }
+}
